@@ -86,12 +86,6 @@
 				<version>4.8.1</version>
 				<scope>test</scope>
 			</dependency>
-			<dependency>
-				<groupId>postgresql</groupId>
-				<artifactId>postgresql</artifactId>
-				<version>8.4-702.jdbc4</version>
-				<scope>test</scope>
-			</dependency>
 			<!-- ################################ -->
 			<!-- ########## HIBERNATE ########### -->
 			<!-- ################################ -->
@@ -104,24 +98,25 @@
 			<!-- ################################ -->
 			<!-- ############# EJB3 ############# -->
 			<!-- ################################ -->
-			<dependency>
+			<!--<dependency>
 				<groupId>javax.ejb</groupId>
 				<artifactId>ejb-api</artifactId>
 				<version>3.0</version>
-				<scope>provided</scope><!-- provided -->
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>javax.persistence</groupId>
 				<artifactId>persistence-api</artifactId>
 				<version>1.0</version>
-				<scope>provided</scope><!-- provided -->
+				<scope>provided</scope>
 			</dependency>
 			<dependency>
 				<groupId>org.jboss.ejb3</groupId>
 				<artifactId>jboss-ejb3-ext-api</artifactId>
 				<version>1.0.0</version>
-				<scope>provided</scope><!-- provided -->
+				<scope>provided</scope>
 			</dependency>
+			-->
 		</dependencies>
 	</dependencyManagement>
 
