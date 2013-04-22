@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>hibernate</artifactId>
+		<groupId>ar.com.lucasf</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>hibernate-model</artifactId>
+	<name>hibernate-model</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.name}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jboss-maven-plugin</artifactId>
+				<version>1.5.0</version>
+				<configuration>
+					<!--<jbossHome>${jboss.home}</jbossHome>-->
+					<!--<serverName>${jboss.conf.instance}</serverName>-->
+					<fileName>target/${project.build.finalName}.jar</fileName>
+					<deploySubDir>${project.parent.artifactId}</deploySubDir>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>${model.deploy.phase}</phase>
+						<goals>
+							<goal>harddeploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
