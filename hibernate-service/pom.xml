@@ -64,18 +64,7 @@ xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLS
 
 	<build>
 		<finalName>${project.name}</finalName>
-		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>jboss-maven-plugin</artifactId>
-				<version>1.5.0</version>
-				<configuration>
-					<!--<jbossHome>${jboss.home}</jbossHome>-->
-					<!--<serverName>${jboss.conf.instance}</serverName>-->
-					<fileName>target/${project.build.finalName}.jar</fileName>
-					<deploySubDir>${project.parent.artifactId}</deploySubDir>
-				</configuration>
-			</plugin>
+		<plugins>			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-ejb-plugin</artifactId>

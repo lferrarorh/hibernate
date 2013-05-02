@@ -46,7 +46,7 @@
 	<dependencyManagement>
 		<dependencies>
 			<!-- ################################ -->
-			<!-- ########## HIBERNATE ########### -->
+			<!-- ########## MY-HIBERNATE ########### -->
 			<dependency>
 				<groupId>ar.com.lucasf</groupId>
 				<artifactId>hibernate-model</artifactId>
